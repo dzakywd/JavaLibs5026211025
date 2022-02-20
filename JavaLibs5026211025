@@ -1,0 +1,39 @@
+import javax.swing.*;
+
+public class JavaLibs5026211025 {
+
+    public static void main(String[] args) {
+        //Input user
+	    String nama= JOptionPane.showInputDialog("Haloo! Nama kamu siapa?");
+        JOptionPane.showMessageDialog( null, "Haloo " + nama + "! Kenalin, namaku Dzaky.");
+        JOptionPane.showMessageDialog( null, "Aku mau nanya-nanya sesuatu nih sama kamu");
+        String umur1= JOptionPane.showInputDialog("Kamu sekarang umur berapa? (Ketik angkanya aja yaa)");
+            int intUmur1= Integer.parseInt(umur1);
+        String tinggi= JOptionPane.showInputDialog("Di umur segitu tinggi kamu berapa? (Ketik angkanya aja yaa)");
+            int intTinggi= Integer.parseInt(tinggi);
+        String makanan= JOptionPane.showInputDialog("Akhir-akhir ini kamu suka makan apa sih?");
+        String uang= JOptionPane.showInputDialog("Kira-kira butuh uang berapa ya buat makan " + makanan + " sebulan? (Ketik angkanya aja yaa)");
+            double doubUang= Double.parseDouble(uang);
+        String keluarga= JOptionPane.showInputDialog("Kamu kalau di rumah paling deket sama siapa?");
+        String teman= JOptionPane.showInputDialog("Sebutin satu nama orang yang terlintas di pikiranmu sekarang dong!");
+        String umur2= JOptionPane.showInputDialog(teman + " sekarang umur berapa? (Ketik angkanya aja yaa)");
+            int intUmur2= Integer.parseInt(umur2);
+        String barang= JOptionPane.showInputDialog("Kalau " + teman + " lagi ulang tahun, kamu mau kasih barang apa?");
+        String desimal= JOptionPane.showInputDialog("Tolong sebutin satu angka desimal antara 50-100 dong!");
+            double doubdesimal= Double.parseDouble(desimal);
+        JOptionPane.showMessageDialog(null,"Thanks " + nama + " udah mau ngobrol.");
+        JOptionPane.showMessageDialog(null, "Aku punya cerita seru nih!");
+
+        //Perhitungan
+            int tinggiMakanan = intTinggi + intUmur1 + intUmur2;
+            double harga = doubUang - (doubUang * (doubdesimal/100.0));
+
+        //Output cerita
+        JOptionPane.showMessageDialog(null, "Suatu hari, " + nama + " dan " + teman + " ingin membeli makanan bersama-sama. " +
+                "\nMereka melihat tumpukan " + makanan + " yang tingginya mencapai " + tinggiMakanan + " cm seharga Rp" + uang + " sedang dipajang di restoran. " +
+                "\nMereka tahu kalau uang mereka tidak cukup dan memutuskan untuk menjual " + barang + " milik " + keluarga + " " + nama + " untuk mendapatkan uang. " +
+                "\nTernyata uang mereka masih kurang. Tiba-tiba mereka menemukan kupon diskon " + doubdesimal + "% yang bisa digunakan untuk membeli " + makanan + " itu. " +
+                "\nAkhirnya mereka pun pulang dengan bahagia setelah berhasil membeli " + makanan + " hanya dengan Rp" + harga );
+
+    }
+}
